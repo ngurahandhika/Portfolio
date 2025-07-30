@@ -6,18 +6,18 @@ import { ReactTyped } from "react-typed";
 export default function Home() {
   return (
     <>
-      <section className="pt-36 pb-36 transition duration-300 ease-in-out bg-dark h-screen">
-        <div className="container px-16">
-          <div className="flex flex-wrap">
-            <div className="w-full self-center px-4 lg:w-2/5">
-              <h1 className="text-base font-semibold text-indigo-500 md:text-xl">
+      <section className="min-h-screen flex items-center py-8 lg:py-36 transition duration-300 ease-in-out">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-16 max-w-7xl">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+            <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
+              <h1 className="text-md sm:text-xl md:text-2xl font-semibold text-indigo-500">
                 Halo, Aku
-                <span className="mt-1 block text-3xl font-bold text-white lg:text-5xl">
-                  Gusti Ngurah Andhika!
+                <span className="mt-1 block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                  Gusti Ngurah Andhika
                 </span>
               </h1>
 
-              <h2 className="mb-8 mt-2 text-md md:text-lg font-medium text-white/80 lg:mt-3 lg:text-xl">
+              <h2 className="mb-6 sm:mb-8 mt-2 lg:mt-3 text-base sm:text-lg md:text-xl lg:text-xl font-medium text-white/80">
                 Saya Junior -{" "}
                 <ReactTyped
                   strings={[
@@ -27,44 +27,46 @@ export default function Home() {
                   ]}
                   typeSpeed={40}
                   loop
+                  backDelay={2000}
                   backSpeed={15}
                   className="font-bold text-white"
                 />
               </h2>
 
-              <p className="text-gray-300 mb-10 text-sm leading-relaxed sm:text-base">
-                Full-stack developer di Indonesia, dan juga seorang pelajar.
-                <span className="block">
-                  Suka robotics, web development, dan hal-hal teknologi lainnya.
-                </span>
+              <p className="text-gray-300 mb-8 sm:mb-10 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Full-stack developer di Indonesia, dan juga seorang pelajar.{" "}
+                Suka robotics, web-development, dan hal-hal teknologi lainnya.
               </p>
             </div>
-            <div className="w-full self-end px-4 lg:w-1/2">
-              <div className="relative mt-10 lg:right-0 lg:mt-0">
-                <Image
-                  alt="Gusti Ngurah Andhika"
-                  src="/me/formal.png"
-                  className="relative z-[1] mx-auto max-w-full"
-                  width={417}
-                  height={598}
-                />
-                <span className="absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125">
-                  <svg
-                    id="visual"
-                    viewBox="0 0 400 400"
-                    width="400"
-                    height="400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                  >
-                    <g transform="translate(198.65073583466403 179.3546243623096)">
-                      <path
-                        d="M73 -86.6C89.9 -72.9 95.7 -45.4 107.2 -13.9C118.7 17.6 136 53 125.9 74.8C115.9 96.6 78.5 104.7 41.5 121.2C4.6 137.8 -31.9 162.9 -55.8 153.9C-79.7 145 -90.9 102 -102.2 66.7C-113.4 31.3 -124.7 3.7 -126.1 -28.1C-127.5 -59.9 -119 -95.8 -96.4 -108.5C-73.7 -121.2 -36.9 -110.6 -4.4 -105.4C28.1 -100.1 56.1 -100.2 73 -86.6"
-                        fill="#4f39f6"
-                      ></path>
-                    </g>
-                  </svg>
-                </span>
+
+            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+              <div className="relative flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                  <Image
+                    alt="Gusti Ngurah Andhika"
+                    src="/me/formal2.png"
+                    className="relative z-10 w-full h-auto object-contain"
+                    width={417}
+                    height={598}
+                    priority
+                  />
+                  <div className="absolute top-8 sm:top-12 md:top-16 left-1/2 -translate-x-1/2 w-3/4 sm:w-4/5 md:w-full max-w-sm -z-0">
+                    <svg
+                      id="visual"
+                      viewBox="0 0 400 400"
+                      className="w-full h-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                    >
+                      <g transform="translate(184.66884202802652 221.06619564306536)">
+                        <path
+                          d="M103 -109.7C129.7 -76.4 144.9 -38.2 141.1 -3.8C137.3 30.6 114.6 61.3 87.9 86.6C61.3 111.9 30.6 132 0.4 131.6C-29.9 131.3 -59.9 110.5 -76.5 85.2C-93.2 59.9 -96.6 29.9 -102.9 -6.2C-109.1 -42.4 -118.2 -84.9 -101.5 -118.2C-84.9 -151.5 -42.4 -175.8 -2.1 -173.6C38.2 -171.5 76.4 -143 103 -109.7"
+                          fill="#4f39f6"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
