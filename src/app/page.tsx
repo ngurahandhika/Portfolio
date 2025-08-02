@@ -1,23 +1,29 @@
 "use client";
-
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
+import ModeToggle from "../components/ui/themeButton";
 
 export default function Home() {
   return (
     <>
-      <section className="min-h-screen flex items-center py-8 lg:py-36 transition duration-300 ease-in-out">
+      <div className="fixed top-4 right-4 z-50">
+        <ModeToggle />
+      </div>
+
+      <section
+        id="home"
+        className="min-h-screen flex items-center py-8 lg:py-36 transition duration-300 ease-in-out"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-16 max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-md sm:text-xl md:text-2xl font-semibold text-indigo-500">
                 Halo, Aku
-                <span className="mt-1 block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                <span className="mt-1 block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                   Gusti Ngurah Andhika
                 </span>
               </h1>
-
-              <h2 className="mb-6 sm:mb-8 mt-2 lg:mt-3 text-base sm:text-lg md:text-xl lg:text-xl font-medium text-white/80">
+              <h2 className="mb-6 sm:mb-8 mt-2 lg:mt-3 text-base sm:text-lg md:text-xl lg:text-xl font-medium text-gray-700 dark:text-gray-400">
                 Saya Junior -{" "}
                 <ReactTyped
                   strings={[
@@ -29,16 +35,14 @@ export default function Home() {
                   loop
                   backDelay={2000}
                   backSpeed={15}
-                  className="font-bold text-white"
+                  className="font-bold text-foreground"
                 />
               </h2>
-
-              <p className="text-gray-300 mb-8 sm:mb-10 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-gray-600 dark:text-gray-300 mb-8 sm:mb-10 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Full-stack developer di Indonesia, dan juga seorang pelajar.{" "}
                 Suka robotics, web-development, dan hal-hal teknologi lainnya.
               </p>
             </div>
-
             <div className="w-full lg:w-1/2 order-1 lg:order-2">
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
