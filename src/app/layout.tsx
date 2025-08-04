@@ -1,22 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Mono } from "next/font/google";
-import { Roboto } from "next/font/google";
 
 import "./css/globals.css";
 import Footer from "@/components/layouts/footer";
 import { ThemeProvider } from "@/components/themeProvider";
-
-const dmMono = DM_Mono({
-  variable: "--font-dm-mono",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -30,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${dmMono.variable} ${roboto.variable} antialiased`}>
+      <body className={`antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
