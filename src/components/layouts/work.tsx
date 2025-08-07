@@ -22,7 +22,7 @@ const projects = [
       "Website portofolio simple yang dibuat dengan Next.js, TypeScript, dan Tailwind CSS.",
     image: "/projects/portfolio.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://gusti-ngurah.vercel.app",
+    liveUrl: "https://ngurahandhika.vercel.app",
     githubUrl: "https://github.com/ngurahandhika/portfolio",
     featured: true,
   },
@@ -130,7 +130,7 @@ export default function WorkSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 max-w-7xl">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            My Work
+            Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Beberapa project yang telah saya buat
